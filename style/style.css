@@ -1,0 +1,187 @@
+/*reset 有点暴力，但是css结构简单，先暂时这样*/
+*{
+    padding: 0;
+    margin:0;
+}
+
+a{
+    color: #333333;
+    text-decoration: none;
+}
+
+a:hover{
+    cursor: pointer;
+    color: #FFD415;
+}
+
+/*模块site*/
+.site {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+    padding-right: 20px;
+    margin: 10px 0px;
+    width: 250px;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    
+    	    perspective: 600px;
+       -moz-perspective: 600px;
+    -webkit-perspective: 600px;   
+}
+
+.site > .icon {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    box-sizing: border-box;
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    border: 1px solid #eeeeee;
+    padding: 16px;
+    float: left;
+    line-height: 32px;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.site > .icon img {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+}
+
+.site > .front{
+    transform: rotateY(0deg);
+    transform-origin: 27px;
+    transition: all 0.2s ease-in-out;
+}
+
+.site > .front > .title {
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 74px;
+    color: #000000;
+}
+
+.site > .front > .desc {
+    height: 34px;
+    line-height: 17px;
+    font-size: 12px;
+    color: #AAAAAA;
+    padding-left: 74px;
+    vertical-align: middle;
+}
+
+.site > .links{
+    position: absolute;
+    padding-left: 74px;
+    top: 0px;
+    left: 0px;
+    transform-origin: 27px;
+    transform: rotateY(-90deg);
+    opacity: 0;
+    line-height: 64px;
+    
+            transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    
+           transition: all 0.2s ease-in-out;
+    -webkit-transform: all 0.2s ease-in-out;
+    
+            filter: blur(3px);
+       -moz-filter: blur(3px);
+    -webkit-filter: blur(3px);
+}
+
+.site:hover > .icon{
+    background-color: #eeeeee;
+    transition: all 0.2s ease-in-out;
+}
+
+.site:hover > .front{
+    transform: rotateY(90deg);
+    opacity: 0;
+    
+            filter: blur(3px);
+       -moz-filter: blur(3px);
+    -webkit-filter: blur(3px);
+
+            transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    
+           transition: all 0.2s ease-in-out;
+    -webkit-transform: all 0.2s ease-in-out;
+}
+
+.site:hover > .links{
+    transform: rotateY(0deg);
+    opacity: 1;
+            transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    
+            filter: blur(0px);
+       -moz-filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+
+/*模块分类项*/
+.category{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
+    padding:20px 20px;
+    position: relative;
+}
+
+.category > .title{
+    position: absolute;
+    width: 200px;
+    text-align: right;
+    line-height: 80px;
+    font-weight: 200;
+}
+
+.category > .items{
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 250px;
+}
+
+.category:nth-child(2n){
+    background-color: #F8F8F8;
+}
+
+.header{
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    background-color: #222222;
+    height: 64px;
+
+    padding-left: 72px;
+    padding-right: 72px;
+}
+
+.header > .logo{
+    color: #FFFFFF;
+    font-size: 28px;
+    line-height: 64px;
+    float: left;
+}
+
+.header > .suggest{
+    float: right;
+    color: #EEEEEE;
+    line-height: 64px;
+}
+
+.header > .suggest:hover{
+    color: #FFD415;
+}
