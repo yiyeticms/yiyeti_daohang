@@ -12,4 +12,4 @@
 
 # 截图
 
- ![image](https://github.com/yiyeticms/yiyeti_daohang/演示图.png)
+ ![image](https://github.com/yiyeticms/yiyeti_daohang/blob/master/%E6%BC%94%E7%A4%BA%E5%9B%BE.png)
